@@ -152,6 +152,6 @@ getButton.addEventListener('click', (event) => {
 
     setTimeout(() => {
         document.querySelector('#numberPost').value = ''
-    })
+    }, 1000)
 })
 
