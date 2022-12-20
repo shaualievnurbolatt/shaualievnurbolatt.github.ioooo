@@ -135,12 +135,23 @@ function getDataBase() {
 clickButton.addEventListener('click', (event) => {
     event.preventDefault()
     createAndSendRequest()
+
+    setTimeout(() => {
+        document.querySelector('#form-name').value = ''
+        document.querySelector('#form-surname').value = ''
+        document.querySelector('#form-email').value = ''
+    }, 1000)
 })
 
 getButton.addEventListener('click', (event) => {
+    event.preventDefault()
+
     loader(loaders, containerForLoaders)
     postContainer.innerHTML = ''
-    event.preventDefault()
     getDataBase()
+
+    setTimeout(() => {
+        document.querySelector('#numberPost').value = ''
+    })
 })
 
